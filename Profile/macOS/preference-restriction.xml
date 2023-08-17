@@ -1,0 +1,21 @@
+<dict>
+    <key>DisabledPreferencePanes</key>
+    <array>
+        <string>com.apple.preferences.icloud</string>
+        <string>com.apple.preferences.AppleIDPrefPane</string>
+    </array>
+    <key>RestrictSystemPreferences</key>
+    <true />
+    <key>PayloadDisplayName</key>
+    <string>AppleID Restriction</string>
+    <key>PayloadOrganization</key>
+    <string/>
+    <key>PayloadType</key>
+    <string>com.apple.systempreferences</string>
+    <key>PayloadUUID</key>
+    <string>a7b0d248-1124-4880-a2d6-130ae0b54171</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>85c6eb4e-fa4d-47d9-9d6e-881f771c264b.Preferences</string>
+</dict>

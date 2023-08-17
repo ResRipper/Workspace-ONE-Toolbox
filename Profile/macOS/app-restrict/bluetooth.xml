@@ -1,0 +1,34 @@
+<dict>
+    <key>Restrictions</key>
+    <array>
+        <dict>
+            <key>Attributes</key>
+            <!-- Info retrive by using command `codesign -dvvv /path/to/.app`-->
+            <dict>
+                <key>name</key>
+                <string>Bluetooth File Exchange</string>
+                <key>path</key>
+                <string>/System/Applications/Utilities/Bluetooth File
+                    Exchange.app/Contents/MacOS/Bluetooth File Exchange</string>
+            </dict>
+            <key>Actions</key>
+            <array>
+                <integer>1</integer>
+            </array>
+            <key>Message</key>
+            <string>Bluetooth is blocked</string>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Bluetooth Restriction</string>
+    <key>PayloadIdentifier</key>
+    <string>VMware.HubSettings.d14c90bb-175e-4617-8fe7-b5698013f336</string>
+    <key>PayloadOrganization</key>
+    <string />
+    <key>PayloadType</key>
+    <string>com.vmware.hub.mac.restrictions</string>
+    <key>PayloadUUID</key>
+    <string>05fdfd7a-b0fa-49f0-9e7a-6c3b1e5e6540</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>

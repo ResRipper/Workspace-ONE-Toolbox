@@ -1,0 +1,35 @@
+<dict>
+    <key>Restrictions</key>
+    <array>
+        <dict>
+            <key>Attributes</key>
+            <!-- Info retrive by using command `codesign -dvvv /path/to/.app`-->
+            <dict>
+                <key>name</key>
+                <string>Facetime</string>
+                <key>path</key>
+                <string>/System/Applications/App Store.app/Contents/MacOS/App Store</string>
+                <key>bundleId</key>
+                <string>com.apple.AppStore</string>
+            </dict>
+            <key>Actions</key>
+            <array>
+                <integer>1</integer>
+            </array>
+            <key>Message</key>
+            <string>App Store is blocked</string>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>App Store Restriction</string>
+    <key>PayloadIdentifier</key>
+    <string>VMware.HubSettings.891fab61-fd44-4f63-95c4-155874fbb5c8</string>
+    <key>PayloadOrganization</key>
+    <string/>
+    <key>PayloadType</key>
+    <string>com.vmware.hub.mac.restrictions</string>
+    <key>PayloadUUID</key>
+    <string>b487571b-e4a9-4e31-9935-64dfb69d331e</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>

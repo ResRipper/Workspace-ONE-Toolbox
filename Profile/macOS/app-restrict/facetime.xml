@@ -1,0 +1,35 @@
+<dict>
+    <key>Restrictions</key>
+    <array>
+        <dict>
+            <key>Attributes</key>
+            <!-- Info retrive by using command `codesign -dvvv /path/to/.app`-->
+            <dict>
+                <key>name</key>
+                <string>Facetime</string>
+                <key>path</key>
+                <string>/System/Applications/FaceTime.app/Contents/MacOS/FaceTime</string>
+                <key>bundleId</key>
+                <string>com.apple.FaceTime</string>
+            </dict>
+            <key>Actions</key>
+            <array>
+                <integer>1</integer>
+            </array>
+            <key>Message</key>
+            <string>Facetime is blocked</string>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Facetime Restriction</string>
+    <key>PayloadIdentifier</key>
+    <string>VMware.HubSettings.fe7c281e-f0e5-4116-874b-045a9d1fb7a7</string>
+    <key>PayloadOrganization</key>
+    <string/>
+    <key>PayloadType</key>
+    <string>com.vmware.hub.mac.restrictions</string>
+    <key>PayloadUUID</key>
+    <string>43bae7e0-e9fc-4137-94db-fc5ed3453a5a</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
