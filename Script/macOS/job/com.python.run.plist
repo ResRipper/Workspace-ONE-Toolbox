@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Run python script every 10 seconds using python3 env included by Munki from Intelligent Hub -->
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.python.run</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Library/Application Support/AirWatch/Data/Munki/bin/Python.framework/Versions/Current/bin/python3</string>
+            <string>/var/scripts/xxx.py</string>
+        </array>
+        <key>StartInterval</key>
+        <integer>10</integer>
+        <!-- Only run when user loged in -->
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>

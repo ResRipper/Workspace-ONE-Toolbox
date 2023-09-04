@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Force device to sync with the platform for every 3 mins -->
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.hubcli.sync</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/hubcli</string>
+            <string>sync</string>
+        </array>
+        <key>StartInterval</key>
+        <integer>180</integer>
+        <!-- Only run when user loged in -->
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>
