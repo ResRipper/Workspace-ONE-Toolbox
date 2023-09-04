@@ -3,6 +3,7 @@
 import subprocess
 import re
 
+
 approved_path = [
     r' /Applications/',  # /Applications/*
     r' /System/',  # /System/*
@@ -13,6 +14,7 @@ approved_path = [
     r' /opt/homebrew/Cellar/'  # /opt/homebrew/Cellar/*
 ]
 
+# Get running process under .app folder
 process_list_raw = subprocess.check_output(
     ['grep', '.app/'],
     stdin=subprocess.Popen(
@@ -26,30 +28,29 @@ process_list = [' '.join(process.split()).split(' ', 10) for process in process_
 del process_list[-1]
 
 
-def path_check(path: str, white_list: list[str]) -> bool:
-    """
-    Check if path match any regex in white list
-    :param path: Path to be validated
-    :param white_list: White listed path list in regex
-    :return:
+def path_check(path: str) -> bool:
+    """Check if path match any regex in white list
+
+    Args:
+        path (str): Path to be validated
+        white_list (list[str]): White listed path list in regex
     """
     path = ' ' + path
-    for w_path in white_list:
+    for w_path in approved_path:
         if re.search(w_path, path):
             return True
     return False
 
 
 for process in process_list:
-    if 'grep' not in process[10]:
-        if path_check(process[10], approved_path) is False:
-            # Kill process
-            subprocess.Popen(['kill', '-9', process[1]])
-            # Workspace ONE hub notification
-            app_name = re.search(r'/[^/]*\.app/', process[10])[0][1:-5]
-            subprocess.Popen([
-                'hubcli', 'notify',
-                '--title', f'{app_name} is Blocked',
-                '--subtitle', f'{app_name} is not allowed to be run.',
-                '--info', 'Please contact IT dep for more info.'
-            ])
+    if ('grep' not in process[10]) and (path_check(process[10]) is False):
+        # Kill process
+        subprocess.Popen(['kill', '-9', process[1]])
+        # Workspace ONE hub notification
+        app_name = re.search(r'/[^/]*\.app/', process[10])[0][1:-5]
+        subprocess.Popen([
+            'hubcli', 'notify',
+            '--title', f'{app_name} is Blocked',
+            '--subtitle', f'{app_name} is not allowed to be run.',
+            '--info', 'Please contact IT dep for more info.'
+        ])
