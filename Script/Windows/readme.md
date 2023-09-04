@@ -1,0 +1,1 @@
+- Notice: File encoding has to be `UTF-8 with BOM`, or some characters might not be decoded properly during execution
