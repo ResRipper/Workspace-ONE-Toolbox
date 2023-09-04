@@ -1,4 +1,4 @@
-# Offline Windows update package can be found on:
+﻿# Offline Windows update package can be found on:
 # https://www.catalog.update.microsoft.com
 # Or WSUS server
 
